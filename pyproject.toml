@@ -1,25 +1,14 @@
 [tool.black]
-line-length = 88
+line-length = 100
 skip-string-normalization = false
 
 [tool.isort]
 profile = "black"
-line_length = 88
-known_third_party = ["flask", "django"]
-default_section = "THIRDPARTY"
-include_trailing_comma = true
-forced_separate = ["flask"]
+line_length = 100
 skip = [".venv"]
 
-[tool.flake8]
-max-line-length = 88
-extend-ignore = [
-    "E203",    # whitespace before ':'
-    "E266",    # too many leading '#' for block comment
-    "E501",    # line too long
-    "W503",    # line break before binary operator
-]
-
+[flake8]
+max-line-length = 100
 
 [tool.poetry]
 name = "otus-oop"
@@ -34,7 +23,6 @@ python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
-flake8 = "^7.1.1"
 isort = "^5.13.2"
 pre-commit = "^4.0.1"
 
